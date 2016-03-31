@@ -18,7 +18,7 @@
 @end
 
 @implementation JKModule (JKSharedInstance)
-+ (instancetype)sharedViewModel {
++ (instancetype)sharedInstance {
     Class selfClass = [self class];
     id instance = objc_getAssociatedObject(selfClass, @"kJKSharedInstance");
     if (!instance) {
@@ -29,7 +29,7 @@
     return instance;
 }
 
-+ (void)freeSharedViewModel {
++ (void)freeSharedInstance {
     Class selfClass = [self class];
     objc_setAssociatedObject(selfClass, @"kJKSharedInstance", nil,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);

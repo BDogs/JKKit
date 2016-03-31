@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AFHTTPSessionManager.h"
+#import <AFNetworking/AFHTTPSessionManager.h>
 #import "JKHTTPSessionManagerSerializerProtocol.h"
 
 @interface JKHTTPSessionManager : NSObject <NSObject, NSSecureCoding, NSCopying>
