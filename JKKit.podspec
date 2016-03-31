@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JKKit"
-  s.version      = "1.0"
+  s.version      = "1.0.0"
   s.summary      = "北京金凯瑞铭信息技术有限公司-无锡分公司-IOS框架"
   s.homepage     = "http://jksoft.cn/"
   s.license      = "Apache License, Version 2.0"
