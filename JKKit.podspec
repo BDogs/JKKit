@@ -2,14 +2,14 @@
 Pod::Spec.new do |s|
 
   s.name         = "JKKit"
-  s.version      = "1.0.2"
+  s.version      = "1.0"
   s.summary      = "北京金凯瑞铭信息技术有限公司-无锡分公司-IOS框架"
   s.homepage     = "http://jksoft.cn/"
   s.license      = "Apache License, Version 2.0"
   s.author       = "北京金凯瑞铭信息技术有限公司-无锡分公司-傅涛"
   s.platform     = :ios, "7.0"
   s.requires_arc = true
-  s.source       = {:git => 'https://github.com/Ftkey/JKKit.git'}
+  s.source       = {:git => 'https://github.com/Ftkey/JKKit.git', :tag => s.version.to_s }
 
   s.frameworks  = "UIKit","Foundation"
   s.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>'
