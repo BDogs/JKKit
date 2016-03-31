@@ -1,5 +1,5 @@
 //
-//  JKHTTPViewModel.h
+//  JKViewModel.h
 //  JK
 //
 //  Created by Futao on 16/2/27.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JKHTTPViewModel : NSObject
+@interface JKViewModel : NSObject
 @end
 
 // 单例继承
-@interface JKHTTPViewModel (XSSharedInstance)
+@interface JKViewModel (JKSharedInstance)
 + (instancetype)sharedViewModel;
 @end

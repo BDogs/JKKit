@@ -1,17 +1,17 @@
 //
-//  JKHTTPViewModel.m
+//  JKViewModel.m
 //  JK
 //
 //  Created by Futao on 16/2/27.
 //  Copyright © 2016年 JKSoft. All rights reserved.
 //
 
-#import "JKHTTPViewModel.h"
+#import "JKViewModel.h"
 #import <objc/runtime.h>
 
-@implementation JKHTTPViewModel
+@implementation JKViewModel
 @end
-@implementation JKHTTPViewModel (XSSharedInstance)
+@implementation JKViewModel (JKSharedInstance)
 + (instancetype)sharedViewModel {
     Class selfClass = [self class];
     id instance = objc_getAssociatedObject(selfClass, @"kJKSharedInstance");

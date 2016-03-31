@@ -1,5 +1,5 @@
 //
-//  JKHTTPModel.h
+//  JKModel.h
 //  XS
 //
 //  Created by Futao on 16/2/27.
@@ -10,6 +10,6 @@
 
 #import "JSONModel.h"
 
-@interface JKHTTPModel : JSONModel
+@interface JKModel : JSONModel
 
 @end
