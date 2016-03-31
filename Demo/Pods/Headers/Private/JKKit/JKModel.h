@@ -1,1 +1,0 @@
-../../../JKKit/Pod/Classes/Core/Model/JKModel.h

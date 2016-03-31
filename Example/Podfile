@@ -1,0 +1,29 @@
+
+# 工程名称
+workspace "JKKit.xcworkspace"
+# App工程名称
+xcodeproj "JKKit.xcodeproj"
+
+# 最低要求版本
+platform :ios, "7.0"
+# 去除pod库警告
+inhibit_all_warnings!
+
+# 支持Swift (IOS8+才能用)
+# use_frameworks!
+
+# pod库只存在当前目标
+target :"JKKit_Example" do
+    xcodeproj "JKKit.xcodeproj"
+    # 基础库（必备）
+    pod 'JKKit' ,:path => '../'
+    pod 'JKKit/Plugins' ,:path => '../'
+end
+
+target :"JKKit_Tests" do
+    xcodeproj "JKKit.xcodeproj"
+    # 基础库（必备）
+    pod 'JKKit' ,:path => '../'
+    pod 'JKKit/Plugins' ,:path => '../'
+
+end

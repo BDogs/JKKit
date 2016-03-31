@@ -1,1 +1,0 @@
-../../../JKKit/Pod/Classes/Plugins/JKModuleManager.h

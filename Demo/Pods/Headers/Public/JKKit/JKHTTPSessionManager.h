@@ -1,1 +1,0 @@
-../../../JKKit/Pod/Classes/Core/HTTP/JKHTTPSessionManager.h
