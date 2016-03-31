@@ -1,0 +1,20 @@
+# 工程名称
+workspace "XS.xcworkspace"
+# App工程名称
+xcodeproj "XS.xcodeproj"
+
+# 最低要求版本
+platform :ios, "7.0"
+# 去除pod库警告
+inhibit_all_warnings!
+
+# 支持Swift (IOS8+才能用)
+# use_frameworks!
+
+# pod库只存在当前目标
+target :"XS" do
+    xcodeproj "XS.xcodeproj"
+    # 基础库（必备）
+     pod 'JKKit' ,:git => 'https://github.com/Ftkey/JKKit.git'
+     pod 'JKKit/Plugins' ,:git => 'https://github.com/Ftkey/JKKit.git'
+end

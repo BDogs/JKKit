@@ -9,7 +9,24 @@
 #import <Foundation/Foundation.h>
 
 #import "AFHTTPSessionManager.h"
-#import "JKHTTPSessionManagerSerializerProtocol.h"
+
+@protocol JKHTTPSessionManagerRequestSerialization <NSObject, NSSecureCoding, NSCopying>
+
+@required
+- (NSDictionary *)encodeParametersByDecodedParameters:(NSDictionary *)parameters
+                                                error:(NSError **)error;
+
+@optional
+- (NSDictionary *)encodeParametersByRequestSerializer:(AFHTTPRequestSerializer *)requestSerializer
+                                                error:(NSError **)error;
+@end
+
+@protocol JKHTTPSessionManagerResponseSerialization <NSObject, NSSecureCoding, NSCopying>
+
+@required
+- (NSDictionary *)decodeParametersByEncodedParameters:(NSDictionary *)parameters
+                                                error:(NSError **)error;
+@end
 
 @interface JKHTTPSessionManager : NSObject <NSObject, NSSecureCoding, NSCopying>
 
@@ -22,8 +39,8 @@
 @property (nonatomic, strong, readonly) NSURLSessionConfiguration *sessionConfiguration;
 @property (nonatomic, strong, readonly) AFHTTPSessionManager *sessionManager;
 
-@property (nonatomic, strong, readwrite) id<JKHTTPSessionManagerRequestSerialization> requestSerializer;
-@property (nonatomic, strong, readwrite) id<JKHTTPSessionManagerResponseSerialization> responseSerializer;
+@property (nonatomic, strong) id<JKHTTPSessionManagerRequestSerialization> requestSerializer;
+@property (nonatomic, strong) id<JKHTTPSessionManagerResponseSerialization> responseSerializer;
 
 ///---------------------------
 /// @name Making HTTP Requests
@@ -44,7 +61,6 @@
                    parameters:(id)parameters
                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
-
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
                    parameters:(id)parameters
                      progress:(void (^)(NSProgress *downloadProgress))downloadProgress
