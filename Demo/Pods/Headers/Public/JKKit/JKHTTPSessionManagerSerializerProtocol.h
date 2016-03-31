@@ -1,0 +1,1 @@
+../../../JKKit/Pod/Classes/Core/HTTP/JKHTTPSessionManagerSerializerProtocol.h

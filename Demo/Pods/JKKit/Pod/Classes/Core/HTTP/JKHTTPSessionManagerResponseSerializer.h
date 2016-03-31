@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#import "JKHTTPSessionManager.h"
+#import "JKHTTPSessionManagerSerializerProtocol.h"
 
 /**
- *  联盟端API格式定义
+ *  API格式定义
  */
 @interface JKHTTPSessionManagerResponseSerializer : NSObject <JKHTTPSessionManagerResponseSerialization, NSObject, NSSecureCoding, NSCopying>
 /**
- *  是否解密加密过的数据 (RSA)
+ *  是否解密加密过的数据 (RSA) (未实现)
  */
 @property (nonatomic, assign) BOOL decryptEnabled;
 

@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   JKKit:
-    :commit: 97cf622c4602575192eabb161353c4428f740e13
+    :commit: b9b9386ae1f55ed3206dcede7a43747ed2987fcb
     :git: https://github.com/Ftkey/JKKit.git
 
 SPEC CHECKSUMS:
