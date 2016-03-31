@@ -1,6 +1,6 @@
 {
   "name": "JKKit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "summary": "北京金凯瑞铭信息技术有限公司-无锡分公司-IOS框架",
   "homepage": "http://jksoft.cn/",
   "license": "Apache License, Version 2.0",
@@ -10,8 +10,7 @@
   },
   "requires_arc": true,
   "source": {
-    "git": "https://github.com/Ftkey/JKKit.git",
-    "tag": "1.0.0"
+    "git": "https://github.com/Ftkey/JKKit.git"
   },
   "frameworks": [
     "UIKit",

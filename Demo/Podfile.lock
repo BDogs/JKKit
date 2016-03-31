@@ -14,12 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
-  - JKKit (1.0.0):
-    - JKKit/Core (= 1.0.0)
-  - JKKit/Core (1.0.0):
+  - JKKit (1.0.2):
+    - JKKit/Core (= 1.0.2)
+  - JKKit/Core (1.0.2):
     - AFNetworking
     - JSONModel
-  - JKKit/Plugins (1.0.0)
+  - JKKit/Plugins (1.0.2)
   - JSONModel (1.2.0)
 
 DEPENDENCIES:
@@ -32,14 +32,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   JKKit:
-    :commit: e083bcc755a1a0f14377b890c8de7f7045b6b194
+    :commit: b9b9386ae1f55ed3206dcede7a43747ed2987fcb
     :git: https://github.com/Ftkey/JKKit.git
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
-  JKKit: ca6ea0330145270ca20c2a2c93d2e63113a956bc
+  JKKit: 2a60495614b6135059358006932d0c3f4dc6da26
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
 
-PODFILE CHECKSUM: ebf4c691091226bb4abf4d0f4c15581bc42e0e05
+PODFILE CHECKSUM: b36effe100098e7328243bcd7b61eaf84e73955b
 
 COCOAPODS: 1.0.0.beta.3

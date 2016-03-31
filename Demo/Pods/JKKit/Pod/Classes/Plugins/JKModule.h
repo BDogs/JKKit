@@ -14,8 +14,5 @@
 @end
 
 @interface JKModule : NSObject <JKModule>
-@end
-// 单例继承
-@interface JKModule (JKSharedInstance)
 + (instancetype)sharedInstance;
 @end
