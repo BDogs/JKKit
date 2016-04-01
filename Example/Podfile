@@ -11,19 +11,17 @@ inhibit_all_warnings!
 
 # 支持Swift (IOS8+才能用)
 # use_frameworks!
+    # 基础库（必备）
 
 # pod库只存在当前目标
-target :"JKKit_Example" do
-    xcodeproj "JKKit.xcodeproj"
-    # 基础库（必备）
+target :"JKKit_Example" do 
     pod 'JKKit' ,:path => '../'
     pod 'JKKit/Plugins' ,:path => '../'
+    pod 'JKKit/Caches' ,:path => '../'
+
+    target :"JKKit_Tests" do
+      # 基础库（必备）
+      inherit! :search_paths
+    end
 end
 
-target :"JKKit_Tests" do
-    xcodeproj "JKKit.xcodeproj"
-    # 基础库（必备）
-    pod 'JKKit' ,:path => '../'
-    pod 'JKKit/Plugins' ,:path => '../'
-
-end

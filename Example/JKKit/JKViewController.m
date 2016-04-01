@@ -7,8 +7,7 @@
 //
 
 #import "JKViewController.h"
-#import "JKCore.h"
-#import "JKPlugins.h"
+
 @interface JKViewController ()
 
 @end
