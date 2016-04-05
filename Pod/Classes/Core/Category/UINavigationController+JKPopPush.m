@@ -22,32 +22,32 @@
 }
 - (NSArray<__kindof UIViewController *> *)navigateToViewControllerClass:(Class)viewControllerClass animated:(BOOL)animated foundControllerUsingBlock:(void (^)(UIViewController *))whenFoundBlock unfoundPushControllerUsingBlock:(UIViewController * (^)())whenNotFoundBlock enumerateChildViewControllers:(BOOL)enumerateChildViewControllers {
     
-    BOOL ret = NO;
+    BOOL retFound = NO;
     for (UIViewController *popViewController in self.viewControllers) {
         if ([popViewController isKindOfClass:viewControllerClass]) {
             [self popToViewController:popViewController animated:animated];
             if (whenFoundBlock) {
                 whenFoundBlock(popViewController);
             }
-            ret = YES;
+            retFound = YES;
+            break;
+        }else {
             if (enumerateChildViewControllers) {
-                if (!ret) {
-                    for (UIViewController *childViewController in popViewController.childViewControllers) {
-                        if ([childViewController isKindOfClass:viewControllerClass]) {
-                            [self popToViewController:popViewController animated:animated];
-                            if (whenFoundBlock) {
-                                whenFoundBlock(popViewController);
-                            }
-                            ret = NO;
-                            break;
+                for (UIViewController *childViewController in popViewController.childViewControllers) {
+                    if ([childViewController isKindOfClass:viewControllerClass]) {
+                        [self popToViewController:popViewController animated:animated];
+                        if (whenFoundBlock) {
+                            whenFoundBlock(popViewController);
                         }
+                        retFound = YES;
+                        break;
                     }
                 }
             }
-            break;
+            
         }
     }
-    if (ret) {
+    if (!retFound) {
         if (whenNotFoundBlock) {
             UIViewController *detailViewController = whenNotFoundBlock();
             if (detailViewController) {
