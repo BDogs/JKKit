@@ -9,6 +9,12 @@
 @import XCTest;
 #import "JKCore.h"
 #import "JKPlugins.h"
+#import <JKKit/JKCore.h>
+#import <JKKit/JKPlugins.h>
+#import <JKKit/JKFileCache.h>
+#import <JKKit/JKHUD.h>
+#import <JKKit/JKRefresh.h>
+
 @interface Tests : XCTestCase
 
 @end

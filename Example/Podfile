@@ -18,7 +18,9 @@ target :"JKKit_Example" do
     pod 'JKKit' ,:path => '../'
     pod 'JKKit/Plugins' ,:path => '../'
     pod 'JKKit/Caches' ,:path => '../'
-
+    pod 'JKKit/Refresh',:path => '../'
+    pod 'JKKit/HUD',:path => '../'
+    
     target :"JKKit_Tests" do
       # 基础库（必备）
       inherit! :search_paths
