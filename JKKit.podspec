@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JKKit"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "北京金凯瑞铭信息技术有限公司-无锡分公司-IOS框架"
   s.homepage     = "http://jksoft.cn/"
   s.license      = "Apache License, Version 2.0"
@@ -55,6 +55,12 @@ Pod::Spec.new do |s|
     sp.public_header_files   = 'Pod/Classes/HUD/**/*.{h}'
     sp.frameworks            = "UIKit","Foundation"
     sp.dependency 'MBProgressHUD'
+  end
 
-  end  
+    s.subspec 'Validator' do |sp|
+    sp.source_files = 'Pod/Classes/Validator/**/*.{h,m}'
+    sp.public_header_files   = 'Pod/Classes/Validator/**/*.{h}'
+    sp.frameworks            = "UIKit","Foundation"
+  end
+
 end
