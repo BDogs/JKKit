@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "JKFileCache.h"
+#import <JKKit/JKFileCache.h>
 
 @interface CachesTestCase : XCTestCase
 

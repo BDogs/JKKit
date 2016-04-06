@@ -7,6 +7,7 @@
 //
 
 #import "JKViewController.h"
+#import <JKKit/JKKit.h>
 
 @interface JKViewController ()
 
@@ -17,7 +18,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [[JKModel alloc] init];
+    [[JKHTTPObject alloc] init];
+    [[JKHTTPSessionManager alloc] initWithBaseURL:nil sessionConfiguration:nil];
+    [JKFileCache defaultCache];
 }
 
 - (void)didReceiveMemoryWarning

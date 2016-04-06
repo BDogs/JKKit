@@ -6,14 +6,13 @@
 //
 //
 
-#ifndef JKValidator_h
-#define JKValidator_h
+#ifndef _JKValidator_h
+#define _JKValidator_h
 
 #ifndef USE_JKKIT_VALIDATOR
 #define USE_JKKIT_VALIDATOR 1
+#endif
 
 #import "NSString+JKStringValidator.h"
 
-#endif
-
-#endif /* JKValidator_h */
+#endif /* _JKValidator_h */

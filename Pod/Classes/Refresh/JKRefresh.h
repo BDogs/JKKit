@@ -6,16 +6,14 @@
 //
 //
 
-#ifndef JKRefresh_h
-#define JKRefresh_h
+#ifndef _JKRefresh_h
+#define _JKRefresh_h
 
 #ifndef USE_JKKIT_REFRESH
 #define USE_JKKIT_REFRESH 1
+#endif
 
 #import "UIViewController+JKHTTPPages.h"
 #import "UIViewController+JKRefres.h"
 
-#endif
-
-
-#endif /* JKRefresh_h */
+#endif /* _JKRefresh_h */

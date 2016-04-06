@@ -172,7 +172,7 @@
 
 - (NSError*)validateTTL
 {
-    long ttl = [self longLongValue];
+    long long ttl = [self longLongValue];
     if (ttl < 0 || ttl > 2147483647) {
         return [NSError errorWithDomain:@""
                                    code:0

@@ -7,13 +7,7 @@
 //
 
 @import XCTest;
-#import "JKCore.h"
-#import "JKPlugins.h"
 #import <JKKit/JKCore.h>
-#import <JKKit/JKPlugins.h>
-#import <JKKit/JKFileCache.h>
-#import <JKKit/JKHUD.h>
-#import <JKKit/JKRefresh.h>
 
 @interface Tests : XCTestCase
 
@@ -24,6 +18,7 @@
 - (void)setUp
 {
     [super setUp];
+    JKModel *model =  [[JKModel alloc] init];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
