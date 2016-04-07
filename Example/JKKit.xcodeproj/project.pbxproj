@@ -10,6 +10,7 @@
 		0D6EB1E7E31C689DD50FD505 /* libPods-JKKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59031C1E8D09725D1103C98B /* libPods-JKKit_Example.a */; };
 		2B412FC41CAE4C7800025ACB /* CachesTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B412FC31CAE4C7800025ACB /* CachesTestCase.m */; };
 		2B9E14E91CB4DF05008BAD5C /* StringValidatorsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9E14E71CB4DF00008BAD5C /* StringValidatorsTestCase.m */; };
+		2BA8A1051CB6394F004810C1 /* SecurityTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA8A1041CB6394F004810C1 /* SecurityTestCase.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -43,6 +44,9 @@
 		1F480C4CBC6990E33FFB69D6 /* Pods-JKKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKKit_Example/Pods-JKKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2B412FC31CAE4C7800025ACB /* CachesTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachesTestCase.m; sourceTree = "<group>"; };
 		2B9E14E71CB4DF00008BAD5C /* StringValidatorsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringValidatorsTestCase.m; sourceTree = "<group>"; };
+		2BA8A1001CB63273004810C1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2BA8A1021CB632B1004810C1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2BA8A1041CB6394F004810C1 /* SecurityTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTestCase.m; sourceTree = "<group>"; };
 		36F551674CAE9ECCE3E82B69 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		39FDBD08D956175E31C26E58 /* Pods-JKKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKKit_Tests/Pods-JKKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FB2333DA0B861AE0371C8F2 /* libPods-JKKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JKKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,8 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BA8A1021CB632B1004810C1 /* SystemConfiguration.framework */,
+				2BA8A1001CB63273004810C1 /* Security.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -174,6 +180,7 @@
 				6003F5BB195388D20070C39A /* Tests.m */,
 				2B9E14E71CB4DF00008BAD5C /* StringValidatorsTestCase.m */,
 				2B412FC31CAE4C7800025ACB /* CachesTestCase.m */,
+				2BA8A1041CB6394F004810C1 /* SecurityTestCase.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -407,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B412FC41CAE4C7800025ACB /* CachesTestCase.m in Sources */,
+				2BA8A1051CB6394F004810C1 /* SecurityTestCase.m in Sources */,
 				2B9E14E91CB4DF05008BAD5C /* StringValidatorsTestCase.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);

@@ -32,15 +32,17 @@
     NSPredicate* regExPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [regExPredicate evaluateWithObject:self];
 }
-
-- (BOOL)isNumeric {
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setAllowsFloats:YES];
-    if ([formatter numberFromString:self]) {
-        return YES;
-    } else {
-        return NO;
-    }
+- (BOOL)isChineseName
+{
+    NSString* regex = @"[\\u4E00-\\u9FA5]{2,5}(?:·[\\u4E00-\\u9FA5]{2,5})*";
+    NSPredicate* regExPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [regExPredicate evaluateWithObject:self];
+}
+- (BOOL)isIdentityCardNumber
+{
+    NSString* regex = @"\\d{17}[\\d|x]|\\d{15}";
+    NSPredicate* regExPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [regExPredicate evaluateWithObject:self];
 }
 
 - (BOOL)isInteger {
@@ -52,6 +54,16 @@
         return NO;
     }
 }
+- (BOOL)isNumeric {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    [formatter setAllowsFloats:YES];
+    if ([formatter numberFromString:self]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 - (BOOL)isHttpURL
 {
     NSString* regex = @"^((https|http|file|ftp|rtsp|mms)?:\\/\\/)[^\\s]+";

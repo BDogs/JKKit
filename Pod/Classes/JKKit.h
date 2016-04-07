@@ -33,4 +33,8 @@
 #import <JKKit/JKValidator.h>
 #endif
 
+#if USE_JKKIT_SECURITY
+#import <JKKit/JKSecurityWrapper.h>
+#endif
+
 #endif /* _JKKit_ */

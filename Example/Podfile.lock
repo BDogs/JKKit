@@ -14,18 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - JKKit (1.0.5):
-    - JKKit/Core (= 1.0.5)
-  - JKKit/Caches (1.0.5)
-  - JKKit/Core (1.0.5):
+  - JKKit (1.0.6):
+    - JKKit/Core (= 1.0.6)
+  - JKKit/Caches (1.0.6)
+  - JKKit/Core (1.0.6):
     - AFNetworking
     - JSONModel
-  - JKKit/HUD (1.0.5):
+  - JKKit/HUD (1.0.6):
     - MBProgressHUD
-  - JKKit/Plugins (1.0.5)
-  - JKKit/Refresh (1.0.5):
+  - JKKit/Plugins (1.0.6)
+  - JKKit/Refresh (1.0.6):
     - MJRefresh
-  - JKKit/Validator (1.0.5)
+  - JKKit/Security (1.0.6)
+  - JKKit/Validator (1.0.6)
   - JSONModel (1.2.0)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.0)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - JKKit/HUD (from `../`)
   - JKKit/Plugins (from `../`)
   - JKKit/Refresh (from `../`)
+  - JKKit/Security (from `../`)
   - JKKit/Validator (from `../`)
 
 EXTERNAL SOURCES:
@@ -44,11 +46,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  JKKit: d9c41588a4a1a1521f87461d3065a42b9effa546
+  JKKit: f1ce7a0a96c1b77cff0f07db0791baec04ed1547
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
 
-PODFILE CHECKSUM: a241fc7d65764117169f12bbd6645e339deb77b5
+PODFILE CHECKSUM: ef0688f1b0a584e99d3887ac8377b19436546827
 
 COCOAPODS: 1.0.0.beta.3

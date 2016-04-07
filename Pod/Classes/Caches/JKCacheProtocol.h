@@ -10,8 +10,6 @@
 
 @protocol JKCacheProtocol <NSObject>
 
-- (nonnull instancetype)initWithCacheDirectory:(NSString* __nonnull)cacheDirectory;
-
 - (void)dropAllCaches;
 - (void)removeObjectForKey:(NSString* __nonnull)key;
 - (BOOL)objectExistsForKey:(NSString* __nonnull)key;

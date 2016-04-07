@@ -11,6 +11,7 @@
 #import "JKCacheProtocol.h"
 
 @interface JKFileCache : NSObject <JKCacheProtocol>
+- (nonnull instancetype)initWithCacheDirectory:(NSString* __nonnull)cacheDirectory;
 /**
  *  默认缓存 (单例)
  *

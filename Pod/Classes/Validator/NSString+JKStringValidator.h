@@ -13,8 +13,10 @@
 - (BOOL)isEmpty;
 - (BOOL)isEmail;
 - (BOOL)isPhoneNumber;
-- (BOOL)isNumeric;
+- (BOOL)isChineseName;
+- (BOOL)isIdentityCardNumber;
 - (BOOL)isInteger;
+- (BOOL)isNumeric;
 - (BOOL)isHttpURL;
 - (BOOL)isMinLength:(NSUInteger)length;
 - (BOOL)isMaxLength:(NSUInteger)length;

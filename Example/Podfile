@@ -21,6 +21,7 @@ target :"JKKit_Example" do
     pod 'JKKit/Refresh',:path => '../'
     pod 'JKKit/HUD',:path => '../'
     pod 'JKKit/Validator',:path => '../'
+    pod 'JKKit/Security',:path => '../'
 
     target :"JKKit_Tests" do
       # 基础库（必备）

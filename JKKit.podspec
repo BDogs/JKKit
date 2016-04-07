@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JKKit"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "北京金凯瑞铭信息技术有限公司-无锡分公司-IOS框架"
   s.homepage     = "http://jksoft.cn/"
   s.license      = "Apache License, Version 2.0"
@@ -69,6 +69,13 @@ Pod::Spec.new do |s|
     sp.public_header_files   = 'Pod/Classes/Validator/**/*.{h}'
     sp.frameworks            = "UIKit","Foundation"
     sp.user_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'USE_JKKIT_VALIDATOR=1' }
+  end
+
+    s.subspec 'Security' do |sp|
+    sp.source_files = 'Pod/Classes/Security/**/*.{h,m}'
+    sp.public_header_files   = 'Pod/Classes/Security/**/*.{h}'
+    sp.frameworks            = "UIKit","Foundation"
+    sp.user_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'USE_JKKIT_SECURITY=1' }
   end
 
 end
