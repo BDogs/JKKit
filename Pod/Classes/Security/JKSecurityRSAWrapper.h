@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "JKSecurityWrapperResult.h"
 
+#pragma mark - JKSecurityRSAWrapper
 /**
  *  公钥加密-私钥解密、公钥解密、私钥加密 （为了客户端安全，客户端一般都只保存公钥）
  *  支持JAVA、Android、PHP、JS、C#

@@ -16,5 +16,6 @@
 #import "JKSecurityWrapperResult.h"
 #import "JKSecurityWrapper.h"
 #import "JKSecurityRSAWrapper.h"
+#import "JKSecurityAESWrapper.h"
 
 #endif /* JKSecurity_h */

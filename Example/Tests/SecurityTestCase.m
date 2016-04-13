@@ -34,9 +34,9 @@
 - (void)testExample {
     {
         NSString *value = @"123";
-        JKSecurityWrapperResult *shaen = [JKSecurityWrapper aesEncrypt:value key:@"key"];
+        JKSecurityWrapperResult *shaen = [JKSecurityAESWrapper encryptString:value key:@"key"];
         NSLog([shaen description]);
-        JKSecurityWrapperResult *shade = [JKSecurityWrapper aesDecryptWithBase64:shaen.base64 key:@"key"];
+        JKSecurityWrapperResult *shade = [JKSecurityAESWrapper decryptBase64:shaen.base64 key:@"key"];
         NSLog([shade description]);
         
         XCTAssertEqualObjects(shade.utf8String,value);
@@ -44,18 +44,18 @@
     }
     {
         NSString *value = @"色123123调\n分离送\n快递123就废了sdf123sdf数123控刀具浪\n费空间水电费";
-        JKSecurityWrapperResult *shaen = [JKSecurityWrapper aesEncrypt:value key:@"SD放假了水口街道福利卡就死定了开发简历四度\n空间发"];
+        JKSecurityWrapperResult *shaen = [JKSecurityAESWrapper encryptString:value key:@"SD放假了水口街道福利卡就死定了开发简历四度\n空间发"];
         NSLog([shaen description]);
-        JKSecurityWrapperResult *shade = [JKSecurityWrapper aesDecryptWithBase64:shaen.base64 key:@"SD放假了水口街道福利卡就死定了开发简历四度\n空间发"];
+        JKSecurityWrapperResult *shade = [JKSecurityAESWrapper decryptBase64:shaen.base64 key:@"SD放假了水口街道福利卡就死定了开发简历四度\n空间发"];
         NSLog([shade description]);
         
         XCTAssertEqualObjects(shade.utf8String,value);
     }
     {
         NSString *value = @"123";
-        JKSecurityWrapperResult *shaen = [JKSecurityWrapper aesEncrypt:value hexKey:@"CC0A69779E15780ADAE46C45EB451A23CC0A69779E15780ADAE46C45EB451A23" hexIv:@"CC0A69779E15780ADAE46C45EB451A23"];
+        JKSecurityWrapperResult *shaen = [JKSecurityAESWrapper encryptString:value hexKey:@"CC0A69779E15780ADAE46C45EB451A23CC0A69779E15780ADAE46C45EB451A23" hexIv:@"CC0A69779E15780ADAE46C45EB451A23"];
         NSLog([shaen description]);
-        JKSecurityWrapperResult *shade = [JKSecurityWrapper aesDecryptWithBase64:shaen.base64 hexKey:@"CC0A69779E15780ADAE46C45EB451A23CC0A69779E15780ADAE46C45EB451A23" hexIv:@"CC0A69779E15780ADAE46C45EB451A23"];
+        JKSecurityWrapperResult *shade = [JKSecurityAESWrapper decryptBase64:shaen.base64 hexKey:@"CC0A69779E15780ADAE46C45EB451A23CC0A69779E15780ADAE46C45EB451A23" hexIv:@"CC0A69779E15780ADAE46C45EB451A23"];
         NSLog([shade description]);
         
         XCTAssertEqualObjects(shade.utf8String,value);

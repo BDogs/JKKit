@@ -13,21 +13,6 @@
 
 #pragma mark - JKSecurityWrapper
 @interface JKSecurityWrapper : NSObject
-/**
- *  支持JAVA、Android、PHP、JS、C# 加密协议 AES/CBC/PKCS5Padding
- *  参考 https://github.com/keel/aes-cross
- */
-#pragma mark - AES Encrypt
-+ (JKSecurityWrapperResult *)aesEncrypt:(NSString *)data key:(NSString *)key;
-+ (JKSecurityWrapperResult *)aesEncrypt:(NSString *)data hexKey:(NSString *)key hexIv:(NSString *)iv;
-+ (JKSecurityWrapperResult *)aesEncrypt:(NSString *)data key:(NSData *)key iv:(NSData *)iv;
-+ (JKSecurityWrapperResult *)aesEncryptWithData:(NSData *)data key:(NSData *)key iv:(NSData *)iv;
-#pragma mark AES Decrypt
-+ (JKSecurityWrapperResult *)aesDecryptWithBase64:(NSString *)data key:(NSString *)key;
-+ (JKSecurityWrapperResult *)aesDecryptWithBase64:(NSString *)data hexKey:(NSString *)key hexIv:(NSString *)iv;
-+ (JKSecurityWrapperResult *)aesDecryptWithBase64:(NSString *)data key:(NSData *)key iv:(NSData *)iv;
-+ (JKSecurityWrapperResult *)aesDecryptWithData:(NSData *)data key:(NSData *)key iv:(NSData *)iv;
-
 #pragma mark - MD5
 + (JKSecurityWrapperResult *)md5:(NSString *)hashString;
 + (JKSecurityWrapperResult *)md5WithData:(NSData *)hashData;
