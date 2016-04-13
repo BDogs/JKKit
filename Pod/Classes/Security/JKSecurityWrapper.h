@@ -9,22 +9,14 @@
 // !!! 框架来源：https://github.com/kelp404/CocoaSecurity
 
 #import <Foundation/Foundation.h>
-#pragma mark - JKSecurityWrapperResult
-@interface JKSecurityWrapperResult : NSObject
-
-@property (strong, nonatomic, readonly) NSData *data;
-@property (strong, nonatomic, readonly) NSString *utf8String;
-@property (strong, nonatomic, readonly) NSString *hex;
-@property (strong, nonatomic, readonly) NSString *hexLower;
-@property (strong, nonatomic, readonly) NSString *base64;
-
-- (id)initWithBytes:(unsigned char[])initData length:(NSUInteger)length;
-
-@end
-
+#import "JKSecurityWrapperResult.h"
 
 #pragma mark - JKSecurityWrapper
 @interface JKSecurityWrapper : NSObject
+/**
+ *  支持JAVA、Android、PHP、JS、C# 加密协议 AES/CBC/PKCS5Padding
+ *  参考 https://github.com/keel/aes-cross
+ */
 #pragma mark - AES Encrypt
 + (JKSecurityWrapperResult *)aesEncrypt:(NSString *)data key:(NSString *)key;
 + (JKSecurityWrapperResult *)aesEncrypt:(NSString *)data hexKey:(NSString *)key hexIv:(NSString *)iv;
@@ -67,16 +59,3 @@
 + (JKSecurityWrapperResult *)hmacSha512WithData:(NSData *)hashData hmacKey:(NSString *)key;
 @end
 
-
-#pragma mark - JKSecurityWrapperEncoder
-@interface JKSecurityWrapperEncoder : NSObject
-- (NSString *)base64:(NSData *)data;
-- (NSString *)hex:(NSData *)data useLower:(BOOL)isOutputLower;
-@end
-
-
-#pragma mark - JKSecurityWrapperDecoder
-@interface JKSecurityWrapperDecoder : NSObject
-- (NSData *)base64:(NSString *)data;
-- (NSData *)hex:(NSString *)data;
-@end

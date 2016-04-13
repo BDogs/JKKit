@@ -34,7 +34,7 @@
 #endif
 
 #if USE_JKKIT_SECURITY
-#import <JKKit/JKSecurityWrapper.h>
+#import <JKKit/JKSecurity.h>
 #endif
 
 #endif /* _JKKit_ */
