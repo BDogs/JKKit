@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/Validator/NSString+JKStringValidator.h

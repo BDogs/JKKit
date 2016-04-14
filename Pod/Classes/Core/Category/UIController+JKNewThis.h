@@ -14,8 +14,18 @@
  *  @return storeboard名
  */
 + (NSString *)bridgeStoryName;
+
+/**
+ *  拼接storeboard identity
+ *
+ *  @return storeboard identity
+ */
 + (NSString *)bridgeStoryId;
+
 @end
+
 @interface UIViewController (JKNewThis) <JKControllerNewThisProtocol>
+
 + (instancetype)newThis;
+
 @end

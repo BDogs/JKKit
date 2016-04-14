@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 USE_JKKIT_CACHES=1 USE_JKKIT_CORE=1 USE_JKKIT_HUD=1 USE_JKKIT_PLUGINS=1 USE_JKKIT_REFRESH=1 USE_JKKIT_SECURITY=1 USE_JKKIT_VALIDATOR=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/JKKit" "${PODS_ROOT}/Headers/Public/JSONModel" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MJRefresh"
+LIBRARY_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/AFNetworking" "$CONFIGURATION_BUILD_DIR/JKKit" "$CONFIGURATION_BUILD_DIR/JSONModel" "$CONFIGURATION_BUILD_DIR/MBProgressHUD" "$CONFIGURATION_BUILD_DIR/MJRefresh"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/JKKit" -isystem "${PODS_ROOT}/Headers/Public/JSONModel" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/MJRefresh"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"JKKit" -l"JSONModel" -l"MBProgressHUD" -l"MJRefresh" -framework "CoreGraphics" -framework "Foundation" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+PODS_ROOT = ${SRCROOT}/Pods
