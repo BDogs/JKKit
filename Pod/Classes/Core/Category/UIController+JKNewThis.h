@@ -8,6 +8,11 @@
 
 @protocol JKControllerNewThisProtocol <NSObject>
 @optional
+/**
+ *  拼接storeboard文件名字
+ *
+ *  @return storeboard名
+ */
 + (NSString *)bridgeStoryName;
 + (NSString *)bridgeStoryId;
 @end
